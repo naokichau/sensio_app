@@ -1,0 +1,21 @@
+.page-welcome {
+  .wpage {
+    height: 100%;
+    width: 100%;
+    padding: 25px 16px 16px;
+    background-size: cover;
+    display: block;
+  box-shadow: inset 0px 0px 0px 2000px rgba(0, 0, 0, 0.7);
+  position: relative
+  }
+  ion-item {
+    padding: 0;
+    background: transparent;
+    display: table;
+    margin: 10px auto 5px;
+    width: 220px;
+    .item-inner {
+      padding: 0 !important
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<ion-content>
+  <div #map id="map"></div>
+  <div class="header">
+    <h2 class="section-title" color="dark">{{LangCommon.mapText[0].toUpperCase()}} |  <ion-icon name="ios-thermometer" color="danger" style="font-size: 30px"></ion-icon> HEAT</h2>
+    <button ion-button icon-only clear color="dark" style="position: absolute;top: 22px;right: 6px;" (click)="presentActionSheet()"><ion-icon name="md-more"></ion-icon></button>
+    <div #pleaseConnect id="please-connect">
+      <ion-spinner name="crescent" color="dark"></ion-spinner>
+    </div>
+   
+  </div>
+</ion-content>

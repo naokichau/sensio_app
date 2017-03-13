@@ -1,0 +1,23 @@
+<ion-content>
+  <h2 class="section-title">{{LangCommon.settingText[0].toUpperCase()}}</h2>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="md-globe" item-left></ion-icon>
+      {{LangSetting.langSetText[0]}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ios-thermometer" item-left></ion-icon>
+
+      <ion-label>{{LangSetting.useCelText[0]}}</ion-label>
+      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+    </ion-item>
+    <ion-item detail-push>
+      <ion-icon name="ios-notifications" item-left></ion-icon>
+      {{LangSetting.pushNotiText[0]}}
+    </ion-item>
+    <ion-item detail-push>
+      <ion-icon name="ios-pin" item-left></ion-icon>
+      {{LangSetting.userLocalText[0]}}
+    </ion-item>
+  </ion-list>
+</ion-content>
