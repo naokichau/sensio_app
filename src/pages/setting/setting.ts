@@ -16,11 +16,11 @@ import { UserLocalSettingPage } from '../user-local-setting/user-local-setting';
 export class SettingPage {
 LangCommon: any = LangCommon;
 LangSetting: any = LangSetting;
+appOption: any = {
+  useCelsius: localStorage.getItem("useCelsius"),
+  enablePush: localStorage.getItem("enablePush")
+}
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingPage');
-  }
  openPushSet(){
    this.navCtrl.push(PushSettingPage)
  }

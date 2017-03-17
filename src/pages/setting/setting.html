@@ -9,11 +9,12 @@
       <ion-icon name="ios-thermometer" item-left></ion-icon>
 
       <ion-label>{{LangSetting.useCelText[0]}}</ion-label>
-      <ion-toggle [(ngModel)]="pepperoni"></ion-toggle>
+      <ion-toggle [(ngModel)]="appOption.useCelsius"></ion-toggle>
     </ion-item>
-    <ion-item detail-push>
+    <ion-item>
       <ion-icon name="ios-notifications" item-left></ion-icon>
-      {{LangSetting.pushNotiText[0]}}
+       <ion-label>{{LangSetting.pushNotiText[0]}}</ion-label>
+       <ion-toggle [(ngModel)]="appOption.enablePush"></ion-toggle>
     </ion-item>
     <ion-item detail-push>
       <ion-icon name="ios-pin" item-left></ion-icon>

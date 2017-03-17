@@ -10,7 +10,7 @@ export const LangCommon ={
     searchText:['search'],
     settingText:['setting'],
     recommendationText:['recommendation'],
-    errorDeviceText:['error devices'],
+    errorDeviceText:['errors'],
 };
 export const LangAnalytics = {
 todayText:['today'],
