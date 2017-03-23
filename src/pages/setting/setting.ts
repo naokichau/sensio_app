@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LangCommon, LangSetting} from '../../app/languages';
-import { PushSettingPage } from '../push-setting/push-setting';
 import { UserLocalSettingPage } from '../user-local-setting/user-local-setting';
 /*
   Generated class for the Setting page.
@@ -21,9 +20,6 @@ appOption: any = {
   enablePush: localStorage.getItem("enablePush")
 }
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
- openPushSet(){
-   this.navCtrl.push(PushSettingPage)
- }
   openLocaltionSet(){
    this.navCtrl.push(UserLocalSettingPage)
  }

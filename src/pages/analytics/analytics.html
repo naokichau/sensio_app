@@ -1,54 +1,33 @@
-<ion-content>
-  <h2 class="section-title">{{LangCommon.weatherForecastText[0].toUpperCase()}} <br> <span style="color:#387ef5;font-size: 15px;font-weight: normal"> 19th March, 2017</span></h2>
-<ion-grid style="margin: -20px 0 20px;padding: 0">
-    <ion-row nowrap style="overflow: scroll;padding: 10px">
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
-        <h4 style="font-size:25px">{{LangAnalytics.todayText[0]}}</h4>
-        </ion-item>
-      </ion-col>
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
-        <h4 style="font-size:25px">{{LangAnalytics.tomorrowText[0]}}</h4>
-        </ion-item>
-      </ion-col>
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
-        <h4 style="font-size:25px;width:70px;white-space: normal">{{LangAnalytics.nextSevenDayText[0]}}</h4>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <h2 class="section-title">{{LangCommon.recommendationText[0].toUpperCase()}}</h2>
-<h2 class="section-title">{{LangCommon.analyticsText[0].toUpperCase()}}</h2>
+<ion-content style="background: #f9f9f9">
+<h3 class="section-title">{{LangCommon.analyticsText[0].toUpperCase()}}</h3>
 <ion-grid style="margin: -20px 0 20px;padding: 0">
     <ion-row wrap style="padding:10px">
       <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
+        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
         <ion-icon name="ios-thermometer" color="danger" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.heatText[0]}}</h4>
         </ion-item>
       </ion-col>
       <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
+        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
         <ion-icon name="md-rainy" color="primary" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.rainText[0]}}</h4>
         </ion-item>
       </ion-col>
       <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
+        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
         <ion-icon name="md-sunny" color="sun" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.lightText[0]}}</h4>
         </ion-item>
       </ion-col>
      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0">
-        <ion-item (click)="chooseExercise()" color="dark" style=" box-shadow:0px 5px 15px -4px rgba(0,0,0,0.5);height: 110px;width: 100%;border-radius: 6px"> 
+        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
         <ion-icon name="ios-water" color="secondary" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.humidityText[0]}}</h4>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
-<h2 class="section-title">{{LangCommon.sysStatusText[0].toUpperCase()}}</h2>
+<h3 class="section-title">{{LangCommon.sysStatusText[0].toUpperCase()}}</h3>
 
 </ion-content>

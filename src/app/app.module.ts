@@ -10,7 +10,7 @@ import {MapPage} from '../pages/map/map';
 import {NotificationsPage} from '../pages/notifications/notifications';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AreaDetailPage } from '../pages/area-detail/area-detail';
-import { PushSettingPage } from '../pages/push-setting/push-setting';
+import {WeatherPage} from '../pages/weather/weather';
 import { UserLocalSettingPage } from '../pages/user-local-setting/user-local-setting';
 import { TabsPage } from '../pages/tabs/tabs';
 @NgModule({
@@ -22,7 +22,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     NotificationsPage,
     WelcomePage,
     AreaDetailPage,
-    PushSettingPage,
+    WeatherPage,
     UserLocalSettingPage,
     TabsPage
   ],
@@ -38,7 +38,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     NotificationsPage,
     WelcomePage,
     AreaDetailPage,
-    PushSettingPage,
+    WeatherPage,
     UserLocalSettingPage,
     TabsPage
   ],

@@ -27,7 +27,7 @@ export class MapPage {
     }, {
       text: LangCommon.lightText[0],
       icon: 'md-sunny',
-      color: 'sun'
+      color: 'secondary'
     }, {
       text: LangCommon.rainText[0],
       icon: 'md-rainy',
@@ -35,11 +35,11 @@ export class MapPage {
     }, {
       text: LangCommon.humidityText[0],
       icon: 'ios-water',
-      color: 'secondary'
+      color: 'primary'
     }, {
       text: LangCommon.errorDeviceText[0],
       icon: 'ios-warning',
-      color: 'dark'
+      color: 'error'
     }, {
       text: LangCommon.searchText[0],
       icon: 'ios-search',
@@ -121,7 +121,7 @@ export class MapPage {
               this.changeView(6)
             }
           }, {
-            text: 'Cancel',
+            text: LangCommon.cancelText[0],
             role: 'cancel',
             handler: () => {
               console.log('Cancel clicked');

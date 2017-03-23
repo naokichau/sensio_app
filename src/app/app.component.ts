@@ -21,7 +21,7 @@ this.initConfig()
        let welcomeModal = this
           .modalCtrl
           .create(WelcomePage);
-        welcomeModal.present();
+     //   welcomeModal.present();
     });
   }
   initConfig(){

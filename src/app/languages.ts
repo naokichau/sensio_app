@@ -11,8 +11,13 @@ export const LangCommon ={
     settingText:['setting'],
     recommendationText:['recommendation'],
     errorDeviceText:['errors'],
+    cancelText:['cancel'],
+    okText:['ok']
 };
 export const LangAnalytics = {
+
+}
+export const LangWeather = {
 todayText:['today'],
 tomorrowText:['tomorrow'],
 nextSevenDayText:['next 7 days'],
@@ -29,5 +34,6 @@ export const LangSetting = {
     useCelText:['use celsius'],
     pushNotiText:['push notifications'],
     userLocalText:['your location'],
-    langSetText:['language']
+    langSetText:['language'],
+    appInfo:['About']
 }

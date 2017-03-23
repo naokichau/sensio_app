@@ -1,5 +1,5 @@
 <ion-content>
-  <h2 class="section-title">{{LangCommon.settingText[0].toUpperCase()}}</h2>
+  <h3 class="section-title">{{LangCommon.settingText[0].toUpperCase()}}</h3>
   <ion-list>
     <ion-item>
       <ion-icon name="md-globe" item-left></ion-icon>
@@ -19,6 +19,10 @@
     <ion-item detail-push>
       <ion-icon name="ios-pin" item-left></ion-icon>
       {{LangSetting.userLocalText[0]}}
+    </ion-item>
+    <ion-item detail-push>
+      <ion-icon name="ios-information-circle" item-left></ion-icon>
+      {{LangSetting.appInfo[0]}}
     </ion-item>
   </ion-list>
 </ion-content>
