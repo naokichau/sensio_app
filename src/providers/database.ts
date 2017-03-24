@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Parse} from 'parse';
 
@@ -11,22 +11,27 @@ import {Parse} from 'parse';
 */
 @Injectable()
 export class Database {
-Devices = Parse.Object.extend("devices")
+  DeviceList : any;
+  Devices = Parse
+    .Object
+    .extend("devices")
 
-  constructor(public http: Http) {
-Parse.initialize("sensio");
-Parse.serverURL = 'http://sensioserver.herokuapp.com/parse'
+  constructor(public http : Http) {
+    Parse.initialize("sensio");
+    Parse.serverURL = 'http://sensioserver.herokuapp.com/parse'
   }
 
-getDevicesList(boundary?:any){
-var query = new Parse.Query(this.Devices);
-query.find({
-  success: function(results) {
-console.log(results);
-  },
-  error: function(error) {
-    alert("Error: " + error.code + " " + error.message);
+  getDevicesList(boundary?: any) : Promise < any > {
+    return new Promise((resolve) => {
+      var query = new Parse.Query(this.Devices);
+      query.find({
+        success: function (results) {
+         resolve(results)
+        },
+        error: function (error) {
+          alert("Error: " + error.code + " " + error.message);
+        }
+      });
+    })
   }
-});
-}
 }

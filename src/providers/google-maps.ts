@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Platform,ToastController} from 'ionic-angular';
+import {Platform, ToastController} from 'ionic-angular';
 import {Connectivity} from './connectivity';
 import {Geolocation} from 'ionic-native';
 import {mapStyles} from '../app/map-styles';
@@ -16,18 +16,15 @@ export class GoogleMaps {
   currentMarker : any;
   apiKey : string;
 
-  constructor(public connectivityService : Connectivity,private toastCtrl: ToastController) {}
+  constructor(public connectivityService : Connectivity, private toastCtrl : ToastController) {}
 
+  presentToast(text) {
+    let toast = this
+      .toastCtrl
+      .create({message: text, showCloseButton: true, position: 'top'});
 
-presentToast(text) {
-  let toast = this.toastCtrl.create({
-    message: text,
-    showCloseButton: true,
-    position: 'top'
-  });
-
-  toast.present();
-}
+    toast.present();
+  }
 
   init(mapElement : any, pleaseConnect : any) : Promise < any > {
 
@@ -42,7 +39,7 @@ presentToast(text) {
 
     return new Promise((resolve) => {
       if (typeof google == "undefined" || typeof google.maps == "undefined") {
- this.apiKey= "AIzaSyB7xTU3DSM7bS7imq4h_aESuHl39z06_Ec"
+        this.apiKey = "AIzaSyB7xTU3DSM7bS7imq4h_aESuHl39z06_Ec"
         console.log("Google maps JavaScript needs to be loaded.");
         this.disableMap();
         if (this.connectivityService.isOnline()) {
@@ -72,11 +69,13 @@ presentToast(text) {
         }
       } else {
 
-this.presentToast("4");
+        this.presentToast("4");
         if (this.connectivityService.isOnline()) {
-          this.initMap().then((map) => {
-                resolve(map);
-              });
+          this
+            .initMap()
+            .then((map) => {
+              resolve(map);
+            });
           this.enableMap();
         } else {
           this.disableMap();
@@ -100,8 +99,11 @@ this.presentToast("4");
         .getCurrentPosition()
         .then((position) => {
 
-         // let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-          let latLng = new google.maps.LatLng( 10.7761062,106.6607243);
+          // let latLng = new google.maps.LatLng(position.coords.latitude,
+          // position.coords.longitude);
+          let latLng = new google
+            .maps
+            .LatLng(10.7761062, 106.6607243);
 
           let mapOptions = {
             center: latLng,

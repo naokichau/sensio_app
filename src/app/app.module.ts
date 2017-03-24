@@ -11,6 +11,7 @@ import {NotificationsPage} from '../pages/notifications/notifications';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AreaDetailPage } from '../pages/area-detail/area-detail';
 import {WeatherPage} from '../pages/weather/weather';
+import {DevicePage} from '../pages/device/device';
 import { UserLocalSettingPage } from '../pages/user-local-setting/user-local-setting';
 import { TabsPage } from '../pages/tabs/tabs';
 @NgModule({
@@ -24,6 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AreaDetailPage,
     WeatherPage,
     UserLocalSettingPage,
+    DevicePage,
     TabsPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AreaDetailPage,
     WeatherPage,
     UserLocalSettingPage,
+    DevicePage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Database,Connectivity,GoogleMaps]

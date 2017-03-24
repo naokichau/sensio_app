@@ -10,7 +10,11 @@ export const LangCommon ={
     searchText:['search'],
     settingText:['setting'],
     recommendationText:['recommendation'],
-    errorDeviceText:['errors'],
+    errorDeviceOnlyText:['errors only?'],
+    moreInfoText:['More information'],
+    lastUpdateText:['Last update at'],
+    deviceText:['device'],
+    noInfoText:['No data'],
     cancelText:['cancel'],
     okText:['ok']
 };
@@ -24,7 +28,7 @@ nextSevenDayText:['next 7 days'],
 }
 export const LangMap = {
     addAreaText:['add area'],
-    browseAreaText:['browse area']
+    browseAreaText:['browse area'],
 }
 export const LangNotifications= {
     notiText:['notifications'],

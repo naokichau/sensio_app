@@ -2,10 +2,16 @@
   <div #map id="map"></div>
   <div class="header">
     <h3 class="section-title" color="dark">{{LangCommon.mapText[0].toUpperCase()}} |  <ion-icon name="{{currentView.icon}}" color="{{currentView.color}}" style="font-size: 30px"></ion-icon> {{currentView.text.toUpperCase()}}</h3>
-    <button ion-button icon-only clear color="dark" style="position: absolute;top: 22px;right: 6px;" (click)="presentActionSheet()"><ion-icon name="md-more"></ion-icon></button>
+    <button ion-button icon-only clear color="dark" style="position: absolute;top: 22px;right: 6px;" (click)="chooseViewOption()"><ion-icon name="md-more"></ion-icon></button>
+    <!--currentView-->
+
     <div #pleaseConnect id="please-connect">
       <ion-spinner name="crescent" color="dark"></ion-spinner>
     </div>
-   
+       <ion-item *ngIf="(currentView.type == 5)">
+      <ion-icon name="ios-warning" item-left></ion-icon>
+       <ion-label>{{LangCommon.errorDeviceOnlyText[0]}}</ion-label>
+       <ion-toggle [(ngModel)]="mapOption.erDeviceOnly"></ion-toggle>
+    </ion-item>
   </div>
 </ion-content>

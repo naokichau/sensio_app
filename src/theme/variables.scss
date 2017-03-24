@@ -17,6 +17,10 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 $colors: ( primary : #163796, secondary : #ffde17, danger : #f53d3d, light : #f9f9f9, dark : #101010, error:#f2e103 );
 $tabs-md-tab-min-height: 5rem;
+.deviceInfo{
+    .action-sheet-sub-title{
+      padding-left:15px !important;
+    }}
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
