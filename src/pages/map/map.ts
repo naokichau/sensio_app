@@ -121,7 +121,7 @@ export class MapPage {
     let actionSheet = this
       .actionSheetCtrl
       .create({
-        title: LangCommon.deviceText[0] + ' ID: '+ device.id,
+        title: LangCommon.deviceText[0].toUpperCase() + ' ID: '+ device.id,
         subTitle: device.updatedAt,
         cssClass:"deviceInfo",
         buttons: [

@@ -18,7 +18,11 @@ $font-path: "../assets/fonts";
 $colors: ( primary : #163796, secondary : #ffde17, danger : #f53d3d, light : #f9f9f9, dark : #101010, error:#f2e103 );
 $tabs-md-tab-min-height: 5rem;
 .deviceInfo{
+    .action-sheet-title{
+        color:#000 !important
+    }
     .action-sheet-sub-title{
+        color:#ccc;
       padding-left:15px !important;
     }}
 // App iOS Variables
