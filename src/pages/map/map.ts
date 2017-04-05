@@ -6,6 +6,10 @@ import {LangCommon, LangMap} from '../../app/languages';
 import {AreaDetailPage} from '../area-detail/area-detail';
 import {DevicePage} from '../device/device';
 import {Database} from '../../providers/database';
+import { SettingPage } from '../setting/setting';
+import {AnalyticsPage} from '../analytics/analytics';
+import {NotificationsPage} from '../notifications/notifications';
+import {AddDevicePage} from '../add-device/add-device';
 import 'rxjs/add/operator/map';
 /*
   Generated class for the Map page.
@@ -62,9 +66,17 @@ export class MapPage {
       type: 6
     }
   ]
+    page: any = [
+  AnalyticsPage,MapPage,NotificationsPage,SettingPage,AddDevicePage
+]
   constructor(public navCtrl : NavController, public navParams : NavParams, public maps : GoogleMaps, public actionSheetCtrl : ActionSheetController, public database : Database) {
     this.currentView = this.viewOption[0]
   }
+
+changeTabs(pageId){
+  this.navCtrl.setRoot(this.page[pageId])
+}
+
   loadMap() {
     let mapLoaded = this
       .maps
@@ -131,7 +143,8 @@ export class MapPage {
             handler: () => {
             }
           }, {
-            text: device.attributes.light+ " lux",
+            text: LangCommon.noInfoText[0],
+            // device.attributes.light+ " lux",
             icon: this.viewOption[1].icon,
             handler: () => {
             }

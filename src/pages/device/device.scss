@@ -1,3 +1,42 @@
 page-device {
+  .section-title {
+    padding-left: 50px;
+    font-weight: bold
+  }
+  .section-title:first-child {
+    padding-top: 10px
+  }
+  .ct-label {
+    color: #fff
+  }
+  .ct-area {
+    fill: #fff;
+  }
+}
 
+.ct-line {
+  fill: transparent
+}
+
+.temp {
+  .ct-grid {
+    stroke: rgb(227, 50, 50) //18,11
+  }
+}
+  .sun {
+      .ct-area {
+        fill: #222;
+      }
+    .ct-grid {
+      stroke: rgba(34,34,34,0.1)
+    }
+    .ct-label {
+      color: #222
+    }
+  }
+  
+.humi {
+    .ct-grid {
+      stroke: rgb(4, 44, 139)
+    }
 }

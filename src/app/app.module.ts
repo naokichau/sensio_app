@@ -10,10 +10,11 @@ import {MapPage} from '../pages/map/map';
 import {NotificationsPage} from '../pages/notifications/notifications';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { AreaDetailPage } from '../pages/area-detail/area-detail';
-import {WeatherPage} from '../pages/weather/weather';
+import {AddDevicePage} from '../pages/add-device/add-device';
 import {DevicePage} from '../pages/device/device';
 import { UserLocalSettingPage } from '../pages/user-local-setting/user-local-setting';
-import { TabsPage } from '../pages/tabs/tabs';
+import { ChartistModule} from 'ng-chartist';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,13 +24,12 @@ import { TabsPage } from '../pages/tabs/tabs';
     NotificationsPage,
     WelcomePage,
     AreaDetailPage,
-    WeatherPage,
+    AddDevicePage,
     UserLocalSettingPage,
-    DevicePage,
-    TabsPage
+    DevicePage
   ],
   imports: [
-    IonicModule.forRoot(MyApp, {mode: 'md'})
+    IonicModule.forRoot(MyApp, {mode: 'md'}),ChartistModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,10 +40,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     NotificationsPage,
     WelcomePage,
     AreaDetailPage,
-    WeatherPage,
+    AddDevicePage,
     UserLocalSettingPage,
-    DevicePage,
-    TabsPage
+    DevicePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Database,Connectivity,GoogleMaps]
 })

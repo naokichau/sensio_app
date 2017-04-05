@@ -1,33 +1,54 @@
 <ion-content style="background: #f9f9f9">
-<h3 class="section-title">{{LangCommon.analyticsText[0].toUpperCase()}}</h3>
+  <h3 class="section-title">{{LangCommon.weatherText[0].toUpperCase()}}</h3>
+<div style="display: block;width: 100%;height: auto;overflow: hidden;padding:0 20px"> 
+<img src="../../assets/image/weather/sunny.png" style="width:100px;height:100px;float:left">
+<div style="float: left;padding-left: 20px">
+  <h3>Sunny</h3> 
+  <h4 style="font-size: 30px">20&ordm;C</h4>
+
+</div>
+</div>
+<h3 class="section-title">HOME</h3>
 <ion-grid style="margin: -20px 0 20px;padding: 0">
-    <ion-row wrap style="padding:10px">
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
+    <ion-row nowrap style="padding:0 0 10px 20px;overflow-x: scroll">
+        <ion-col style="min-width:120px;height: 110px;margin-top: 15px;padding:0 15px 0 0">
+<h4>3 <br>devices</h4>
+<p color="primary">status: normal</p>
+      </ion-col>
+      <ion-col class="item-device">
+        <ion-item (click)="chooseExercise()" color="light"> 
         <ion-icon name="ios-thermometer" color="danger" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.heatText[0]}}</h4>
         </ion-item>
       </ion-col>
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0">
-        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
+      <ion-col class="item-device">
+        <ion-item (click)="chooseExercise()" color="light"> 
         <ion-icon name="md-rainy" color="primary" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.rainText[0]}}</h4>
         </ion-item>
       </ion-col>
-      <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0 8px 0 0">
-        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
+      <ion-col class="item-device">
+        <ion-item (click)="chooseExercise()" color="light"> 
         <ion-icon name="md-sunny" color="sun" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.lightText[0]}}</h4>
         </ion-item>
       </ion-col>
-     <ion-col width-50 style="height: 110px;margin-top: 15px;padding:0">
-        <ion-item (click)="chooseExercise()" color="light" style="height: 110px;width: 100%;border-radius: 0;border:1px solid #ccc;box-shadow:none"> 
+     <ion-col class="item-device">
+        <ion-item (click)="chooseExercise()" color="light"> 
         <ion-icon name="ios-water" color="secondary" style="font-size: 40px"></ion-icon>
         <h4 style="font-size:20px">{{LangCommon.humidityText[0]}}</h4>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
-<h3 class="section-title">{{LangCommon.sysStatusText[0].toUpperCase()}}</h3>
-
+    <ion-fab bottom right style="padding:10px">
+      <button ion-fab color="primary"><ion-icon name="md-menu"></ion-icon></button>
+          <ion-fab-list side="top">
+      <button ion-fab color="primary" (click)="changeTabs(0)"><ion-icon name="ios-analytics"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(1)"><ion-icon name="ios-map"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(2)"><ion-icon name="ios-notifications"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(3)"><ion-icon name="ios-settings"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(4)"><ion-icon name="md-add"></ion-icon></button>
+    </ion-fab-list>
+    </ion-fab>
 </ion-content>

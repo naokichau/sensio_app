@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { Platform,ModalController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { TabsPage } from '../pages/tabs/tabs';
+import { AnalyticsPage } from '../pages/analytics/analytics';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = TabsPage;
+  rootPage = AnalyticsPage;
 
   constructor(platform: Platform, public modalCtrl : ModalController) {
 this.initConfig()
@@ -21,7 +21,7 @@ this.initConfig()
        let welcomeModal = this
           .modalCtrl
           .create(WelcomePage);
-     //   welcomeModal.present();
+       welcomeModal.present();
     });
   }
   initConfig(){

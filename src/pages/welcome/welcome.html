@@ -1,15 +1,38 @@
 <ion-content scroll="false" class="page-welcome">
-<div class="wpage">
- <img src="assets/image/logo_w.png" style="height:80px;">
-               <h2 style="padding-top:20px;width: 70%;color:#fff;font-size: 2em;margin: 0">SENSE THE WORLD AROUND YOU</h2>
+  <div class="wpage">
+    <img src="assets/image/logo.jpg" style="height:90px;">
+    <h2 style="width: 90px;text-align: center;color:#424ede;font-size: 2em;margin: 0">kubus</h2>
+        <ion-slides style="height: 400px;width:100%;position: absolute;bottom:0;left:0;padding: 0 20px">
+      <ion-slide style="padding-right: 15px">
+        <div style="width: 100%;padding-left: 5px">
+          <button ion-button clear color="primary" style="float: left;border-bottom: 2px solid #424ede;padding: 0">LOGIN</button>
+          <button ion-button clear color="dark" style="float: left;margin-left: 10px">SIGNUP</button>
+          <button ion-button clear icon-only color="dark" style="float: left;margin-left: 10px"><ion-icon name="logo-facebook"></ion-icon></button>
+          <button ion-button clear icon-only color="dark" style="float: left;margin-left: 10px"><ion-icon name="logo-google"></ion-icon></button>
+        </div>
+        <ion-item style="padding-left: 5px">
+          <ion-label color="primary" stacked>email</ion-label>
+          <ion-input type="email" placeholder="example@example.com"></ion-input>
+        </ion-item>
 
-        <button ion-button icon-only clear color="light" (click)="openMain()" style="width:50px;position: absolute;right:20px;bottom: 20px"> <ion-icon name="md-arrow-down"></ion-icon> </button>
-        </div>
-        <div class="wpage" style="background-image: url('/assets/image/city.jpg')">
-               <h2 style="padding-top:20px;width: 70%;color:#fff;font-size: 2em">SENSE THE WORLD AROUND YOU</h2>
-             <div style="position: absolute;left:20px;bottom: 20px">
-          <img src="assets/image/logo_w.png" style="height:80px;">    
-        </div>
-        <button ion-button icon-only clear color="light" (click)="openMain()" style="width:50px;position: absolute;right:20px;bottom: 20px"> <ion-icon name="md-arrow-forward"></ion-icon> </button>
-        </div>
+        <ion-item style="padding-left: 5px">
+          <ion-label color="primary" stacked>password</ion-label>
+          <ion-input type="password" placeholder="your password"></ion-input>
+        </ion-item>
+          <ion-item style="padding-left: 5px">
+    <ion-label>developer mode</ion-label>
+    <ion-checkbox [(ngModel)]="sausage"></ion-checkbox>
+  </ion-item>
+      </ion-slide>
+    </ion-slides>
+    <p style="position: absolute;bottom: 20px;left: 30px;color: rgba(0,0,0,0.4);font-weight: bold">v0.5a</p>
+    <ion-fab bottom right style="padding:10px">
+      <button ion-fab color="primary" (click)="openMain()"><ion-icon name="md-arrow-forward"></ion-icon></button>
+    </ion-fab>
+    <!--<h2 style="position: absolute;left:20px;bottom: 20px;width: 60%;font-size: 2.2em;color:#fff;padding:8px;background: #424ede">sense the world around you</h2>
+    <button ion-button icon-only clear color="primary" style="width:50px;position: absolute;right:20px;bottom: 20px"> <ion-icon name="md-arrow-down"></ion-icon> </button>-->
+  </div>
+  <div class="wpage">
+
+  </div>
 </ion-content>

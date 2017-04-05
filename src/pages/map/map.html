@@ -14,4 +14,13 @@
        <ion-toggle [(ngModel)]="mapOption.erDeviceOnly"></ion-toggle>
     </ion-item>
   </div>
+    <ion-fab bottom right style="padding:10px">
+      <button ion-fab color="primary"><ion-icon name="md-menu"></ion-icon></button>
+          <ion-fab-list side="top">
+      <button ion-fab color="primary" (click)="changeTabs(0)"><ion-icon name="ios-analytics"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(1)"><ion-icon name="ios-map"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(2)"><ion-icon name="ios-notifications"></ion-icon></button>
+      <button ion-fab color="primary" (click)="changeTabs(3)"><ion-icon name="ios-settings"></ion-icon></button>
+    </ion-fab-list>
+    </ion-fab>
 </ion-content>

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Platform, ToastController} from 'ionic-angular';
+import {Platform} from 'ionic-angular';
 import {Connectivity} from './connectivity';
 import {Geolocation} from 'ionic-native';
 import {mapStyles} from '../app/map-styles';
@@ -16,15 +16,8 @@ export class GoogleMaps {
   currentMarker : any;
   apiKey : string;
 
-  constructor(public connectivityService : Connectivity, private toastCtrl : ToastController) {}
+  constructor(public connectivityService : Connectivity) {}
 
-  presentToast(text) {
-    let toast = this
-      .toastCtrl
-      .create({message: text, showCloseButton: true, position: 'top'});
-
-    toast.present();
-  }
 
   init(mapElement : any, pleaseConnect : any) : Promise < any > {
 
@@ -68,8 +61,6 @@ export class GoogleMaps {
 
         }
       } else {
-
-        this.presentToast("4");
         if (this.connectivityService.isOnline()) {
           this
             .initMap()

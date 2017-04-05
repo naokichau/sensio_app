@@ -6,7 +6,7 @@ export const LangCommon ={
     lightText:['light'],
     humidityText:['humidity'],
     sysStatusText:['system status'],
-    weatherForecastText:['weather forecast'],
+    weatherText:['weather'],
     searchText:['search'],
     settingText:['setting'],
     recommendationText:['recommendation'],
@@ -20,6 +20,9 @@ export const LangCommon ={
 };
 export const LangAnalytics = {
 
+}
+export const LangDevice = {
+    deviceInfoText:['device info'],
 }
 export const LangWeather = {
 todayText:['today'],

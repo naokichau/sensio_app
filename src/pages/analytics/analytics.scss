@@ -1,17 +1,29 @@
 page-analytics {
- .item-md.item-block .item-inner{
+  .item-md.item-block .item-inner {
     border-bottom: 0
   }
-  .section-title{
-      padding-left: 15px;
-      font-weight: bold
+  .section-title {
+    padding-left: 15px;
+    font-weight: bold
   }
-  .section-title:first-child{
+  .section-title:first-child {
     padding-top: 10px
   }
-  ion-item{
-    .input-wrapper{
+  ion-item {
+    .input-wrapper {
       align-items: flex-end
+    }
+  }
+  .item-device {
+    min-width: 150px !important;
+    height: 110px;
+    margin-top: 15px;
+    padding: 0 15px 0 0;
+    ion-item {
+      border-radius: 4px;
+      height: 110px;
+      width: 100%;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1)
     }
   }
 }
